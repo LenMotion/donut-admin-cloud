@@ -1,0 +1,29 @@
+project:
+  version: 1.0.0
+server:
+  port: 10001
+spring:
+  application:
+    name: basic-gateway-server
+  cloud:
+    nacos:
+      server-addr: localhost:8884
+      username: nacos
+      password: nacos
+      # 服务注册发现
+      discovery:
+        namespace: 39b37a31-62f8-4ed7-8b77-43c1aa9937b1
+      config:
+        namespace: 39b37a31-62f8-4ed7-8b77-43c1aa9937b1
+        file-extension: yml
+        shared-configs:
+          - data-id: base-config.yml
+            group: BASE_GROUP
+          - data-id: base-redis.yml
+            group: BASE_GROUP
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+  main:
+    web-application-type: reactive

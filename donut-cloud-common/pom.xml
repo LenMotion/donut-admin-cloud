@@ -1,0 +1,25 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>cn.lenmotion</groupId>
+        <artifactId>donut-admin-cloud</artifactId>
+        <version>1.0.0</version>
+    </parent>
+    <artifactId>donut-cloud-common</artifactId>
+
+    <packaging>pom</packaging>
+
+    <modules>
+        <module>donut-common-core</module>
+        <module>donut-common-crypto</module>
+        <module>donut-common-excel</module>
+        <module>donut-common-feign</module>
+        <module>donut-common-file-storage</module>
+        <module>donut-common-redis</module>
+        <module>donut-common-starter-base</module>
+        <module>donut-common-starter-db</module>
+        <module>donut-common-trans</module>
+        <module>donut-common-rocketmq</module>
+    </modules>
+</project>

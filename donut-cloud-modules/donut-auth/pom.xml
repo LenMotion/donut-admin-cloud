@@ -1,0 +1,38 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>cn.lenmotion</groupId>
+        <artifactId>donut-cloud-modules</artifactId>
+        <version>1.0.0</version>
+    </parent>
+    <artifactId>donut-auth</artifactId>
+
+    <description>认证中心</description>
+
+    <dependencies>
+        <dependency>
+            <groupId>cn.lenmotion</groupId>
+            <artifactId>donut-common-starter-base</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>cn.lenmotion</groupId>
+            <artifactId>donut-common-crypto</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>cn.lenmotion</groupId>
+            <artifactId>donut-common-trans</artifactId>
+            <version>${project.version}</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>com.fhs-opensource</groupId>
+                    <artifactId>easy-trans-untrans-driver</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+    </dependencies>
+</project>

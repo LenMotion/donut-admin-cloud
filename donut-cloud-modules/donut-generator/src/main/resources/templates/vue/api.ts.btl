@@ -1,0 +1,31 @@
+import { defHttp } from '@/utils/http/axios';
+import { PageResult } from '../model/baseModel';
+
+const basic = '/${moduleName}/${lowClassName}';
+
+enum Api {
+  Basic = basic,
+  List = basic + '/list',
+  Detail = basic + '/',
+<% if (statusApi==true) { %>
+  Status = basic + '/status',
+<% } %>
+}
+
+export const listApi = (params) => {
+  return defHttp.get<PageResult<Recordable>>({ url: Api.List, params });
+};
+
+export const saveApi = (data) => {
+  return defHttp.post<boolean>({ url: Api.Basic, data });
+};
+
+<% if (statusApi==true) { %>
+export const statusApi = (data) => {
+  return defHttp.put<boolean>({ url: Api.Status, data });
+};
+
+<% } %>
+export const deleteApi = (id: number) => {
+  return defHttp.delete<boolean>({ url: Api.Detail + id });
+};

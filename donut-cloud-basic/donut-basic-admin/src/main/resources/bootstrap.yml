@@ -1,0 +1,15 @@
+server:
+  port: 13102
+spring:
+  application:
+    name: basic-admin-server
+  cloud:
+    nacos:
+      server-addr: localhost:8884
+      username: nacos
+      password: nacos
+      # 服务注册发现
+      discovery:
+        namespace: 39b37a31-62f8-4ed7-8b77-43c1aa9937b1
+      config:
+        namespace: 39b37a31-62f8-4ed7-8b77-43c1aa9937b1
